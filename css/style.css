@@ -61,7 +61,10 @@ nav a:hover{
 }
 /*Your Code Here*/
 /*Write selector/rule property to style all elements when in focus*/
-
+a:focus{
+  border-style: solid;
+  border-width: 2px;
+}
 
 nav{
   background-color: #ddd;
@@ -97,7 +100,7 @@ header{
 
   /*Your Code Here*/
   /*Set background-image to header.jpg */
- 
+ background-image: url("../images/header.jpg");
 
   grid-column: 1 / -1;  /*Can you explain what this does?*/
   grid-row: 1 / auto;   /*Can you rewrite it?*/
@@ -119,6 +122,8 @@ header p{
   /*Your Code Here*/
   overflow: hidden;
   grid-column: 1 / -1;
+  max-height: 700px;
+  overflow: hidden;
 }
 
 .about, .about-image{
@@ -128,19 +133,19 @@ header p{
 
 .method, .method-image{
    /*Your Code Here*/
-
+   grid-row: 3 / auto;
 }
 
 
 .clients, .clients-image{
     /*Your Code Here*/
-
+    grid-row: 4 / auto;
 }
 
 
 .contact, .contact-image{
     /*Your Code Here*/
-
+    grid-row: 5 / auto;
 }
 
 .text-block{
@@ -148,7 +153,8 @@ background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
   /*Your code here:*/
-
+  align-self: center;
+  /*margin: auto;*/
 }
 
 
@@ -156,18 +162,24 @@ background-color: rgba(255, 255, 255, .8);
   nav{
     padding: 30px 0px;
     /*Your code here:*/
+    text-align: right;
+    align-self: auto;
   }
 
   .container{
     /*Your code here:*/
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 400px 400px 400px 400px 400px;
   }
 
   .about, .clients, .method-image, .contact-image{
     /*Your code here:*/
+    grid-column: 3 / span 2;
   }
 
   .about-image, .clients-image, .method, .contact{
     /*Your code here:*/
+    grid-column: 2 / span 2;
   }
 }
 
